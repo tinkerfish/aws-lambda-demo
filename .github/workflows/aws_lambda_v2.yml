@@ -15,7 +15,7 @@ jobs:
       ECR_IMAGE_TAG: latest
       AWS_DEFAULT_REGION: us-east-1
       AWS_LAMBDA_FUNC_NAME: aws-lambda-demo-lambda
-      ECR_REPOSITORY: aws-lambda-demo-ecr
+      AWS_ECR_REPOSITORY_NAME: aws-lambda-demo-ecr
 
     steps:
     - name: checkout
