@@ -1,4 +1,12 @@
-name: AWS Lambda Deploy 2
+# ******************************************************** #
+# V2 of the AWS Lambda Deploy workflow adds caching the Docker image on AWS ECR so
+# subsequent runs of the workflow doesn't require rebuilding the image from scratch.
+# The Dockerfile is simple in this example, but a more production-grade Dockerfile
+# with linux packages to install, a lengthier requirements.txt file, etc. will
+# benenfit greatly from image caching.
+# ******************************************************** #
+
+name: AWS Lambda Deploy V2
 
 on:
   push:
@@ -15,7 +23,7 @@ jobs:
       ECR_IMAGE_TAG: latest
       AWS_DEFAULT_REGION: us-east-1
       AWS_LAMBDA_FUNC_NAME: aws-lambda-demo-lambda
-      ECR_REPOSITORY: aws-lambda-demo-ecr
+      AWS_ECR_REPOSITORY_NAME: aws-lambda-demo-ecr
 
     steps:
     - name: checkout
