@@ -9,7 +9,7 @@ Resources:
       Role: arn:aws:iam::257492816994:role/aws-lambda-role
       PackageType: Image
       Code:
-        ImageUri: 257492816994.dkr.ecr.us-east-1.amazonaws.com/test:latest
+        ImageUri: 257492816994.dkr.ecr.us-east-1.amazonaws.com/aws-lambda-demo-ecr:latest
       Timeout: 30
       MemorySize: 128
       TracingConfig:
