@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       ECR_IMAGE_TAG: latest
-      AWS_DEFAULT_REGION: us-east-1
+      AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
       AWS_LAMBDA_FUNC_NAME: aws-lambda-demo-lambda
       AWS_ECR_REPOSITORY_NAME: aws-lambda-demo-ecr
 
